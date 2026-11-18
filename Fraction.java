@@ -7,10 +7,23 @@ public class Fraction {
 		denominator = 1;
 	}
 	
+	
 	public Fraction (int n, int d) { // parameterized constructor
 		numerator = n;
-		denominator = d;
+		setDum(d);
+}
+public Fraction (String s) {
+		for ( int i = 0; i < s.length(); i++) {
+		if(s.substring(i, i+1).equals("/")) {
+			numerator = Integer.parseInt(s.substring(0,i));
+			denominator = Integer.parseInt(s.substring( i+1));
+		}
 	}
+}
+	public Fraction (Fraction f) {
+		numerator = f.getNum();
+		denominator = f.getDum();
+}
 	// behaviour methods( accessor,  mutator, helper)
 	public int getNum() {
 		return numerator;
@@ -18,4 +31,20 @@ public class Fraction {
 	public int getDum() {
 		return denominator;
 	}
+
+	public String toString() {
+		return numerator + "/" + denominator;
+	}
+	public void setNum(int n) {
+		numerator = n;
+	}
+	public void setDum(int d) {
+		if( d!= 0) {
+		denominator = d;
+	} else {
+		denominator = 1;
+		System.out.println( "Error: denominator cannot be zero");
+	}
+	}
+	
 }
