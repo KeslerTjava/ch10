@@ -4,7 +4,7 @@ public class FractionDriver {
 	Fraction f1 = new Fraction();
 	Fraction f2 = new Fraction(100, 101);
 	Fraction f3 = new Fraction("1/2");
-	Fraction f4 = new Fraction(f3);
+	Fraction f4 = Fraction.mult(f2, f3);
 	//System.out.println(f1);
 	//System.out.println(f1.getNum() + "/" + f1.getDum());
 	//System.out.println(f2.getNum() + "/" + f2.getDum());
