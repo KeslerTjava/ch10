@@ -52,4 +52,14 @@ public Fraction (String s) {
 	Fraction ans = new Fraction (n,d);
 	return ans;
 	}
+	public static  int gcf ( int a, int b) {
+	while ( a!= b) {
+		if (a > b) {
+			a =a-b;
+		} else {
+			b= b-a;
+		}
+	}
+	return a;
+}
 }
