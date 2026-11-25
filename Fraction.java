@@ -13,7 +13,7 @@ public class Fraction {
         setDenom(d);
     }
 
-    public Fraction(String s) { // "100/3" style
+    public Fraction(String s) { 
         for (int i = 0; i < s.length(); i++) {
             if (s.substring(i, i + 1).equals("/")) {
                 numerator = Integer.parseInt(s.substring(0, i).trim());
@@ -66,7 +66,7 @@ public class Fraction {
         int g = gcf(numerator, denominator);
         numerator = numerator / g;
         denominator = denominator / g;
-        if (denominator < 0) {      // keep the minus sign on top
+        if (denominator < 0) {      // i did this to keep the minus sign on top
             numerator = -numerator;
             denominator = -denominator;
         }
@@ -102,7 +102,7 @@ public class Fraction {
         return ans;
     }
 
-    // helper method (Euclid's algorithm)
+    // gfc method
     private static int gcf(int a, int b) {
         a = Math.abs(a);
         b = Math.abs(b);
