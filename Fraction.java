@@ -4,8 +4,8 @@ public class Fraction {
 
     // constructors
     public Fraction() { // default constructor
-        numerator = 0;
-        denominator = 1;
+        numerator = (int) (Math.random() * 9) + 1;
+        denominator = (int) (Math.random() * 9) + 1;
     }
 
     public Fraction(int n, int d) { // parameterized constructor
@@ -115,4 +115,8 @@ public class Fraction {
         }
         return a;
     }
+    
+    public boolean equals(Fraction f) {
+		return numerator == f.numerator && denominator == f.denominator;  
+}
 }
