@@ -30,7 +30,7 @@ public static void main(String[] args) {
 	System.out.print(a + " " + op + " " + b + " = ");
 	String input = in.nextLine().trim();
 	
-	if (input.equalsIgnoreCase("quit")) {
+	if (input.toLowerCase().equals("quit")) {
 		break;
 		
 	}
@@ -48,7 +48,7 @@ public static void main(String[] args) {
 		System.out.println("You didn't answer any question");
 	} else {
 		Fraction score = new Fraction(correct, total);
-		int percent =(int) Math.round(100.0 * correct/ total);
+		int percent = (int) Math.round(100.0 * correct/ total);
 		System.out.println("You answered " + score + " correctly, for a score of " + percent + " percent!");
 	}
 }
